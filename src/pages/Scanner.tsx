@@ -38,6 +38,11 @@ export default function Scanner() {
 
     }, []);
 
+    const ready = useCallback((context:CBARContext) => {
+        context.startVideoCamera();
+        setContext(context);
+    }, []);
+
     useEffect(() => {
         if (context) {
             context.setHandler(handleVisualizerEvent)
@@ -46,7 +51,7 @@ export default function Scanner() {
 
     return useMemo(() => (
         <div>
-            <CBARView onContextCreated={setContext} />
+            <CBARView onContextCreated={ready} />
         </div>
-    ), [])
+    ), [ready])
 }
