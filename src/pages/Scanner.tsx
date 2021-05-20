@@ -1,5 +1,5 @@
 import React, {useCallback, useContext, useEffect, useMemo, useRef, useState} from 'react'
-import './Visualizer.css'
+import './Scanner.css'
 
 import {
     CBARAssetType,
@@ -81,7 +81,7 @@ if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPL
 
 const InsideIframe = (window !== window.parent);
 
-export default function Visualizer() {
+export default function Scanner() {
     const siteContext = useContext(SiteContext)!;
     const dispatch = siteContext.dispatch;
     const _isMounted = useRef(false);

@@ -12,7 +12,7 @@ import {BrowserProperties, WebClientInfo} from "react-client-info"
 import * as qs from "querystring";
 import {objectToLowerCase, selectScene} from "./utilities/Methods";
 
-import Visualizer from "./pages/Visualizer"
+import Scanner from "./pages/Scanner"
 import {ApiCapabilityName, FeatureAppearanceConfig, SiteConfig} from "cambrian-base";
 
 const objectFitImages = require('object-fit-images');
@@ -280,7 +280,7 @@ function App() {
                         <SiteContext.Provider value={{ state: siteState, dispatch: dispatchSiteState }}>
                             <WebClientInfo onClientStateChanged={setBrowserProperties} />
                             <Switch location={location}>
-                                <Route exact path="/" component={Visualizer} />
+                                <Route exact path="/" component={Scanner} />
                                 <Route>
                                     <Redirect to="/"/>
                                 </Route>
