@@ -1,0 +1,1798 @@
+{
+  "code": "default",
+  "displayName": "Your Site",
+  "basePath": "https://cambrianar-sites.s3.amazonaws.com/default",
+  "config": {
+    "logo": "branding/logo.png",
+    "description": "See your products here.",
+    "favicon": "branding/logo.png",
+    "primaryColor": "#00b6cc",
+    "buttonTextColor": "#000",
+    "inactiveColor": "rgba(55,55,55,0.5)"
+  },
+  "visualizerConfig": {
+    "hasPhotoUpload": true,
+    "hasScenes": true,
+    "hasShare": true
+  },
+  "brands": [
+    {
+      "name": "flooring-one-source",
+      "code": "flooring-one-source",
+      "displayName": "Flooring One Source",
+      "surfaceTypes": ["floor"],
+      "assetType": "tiled",
+      "sceneCollections": [
+        {
+          "name": "bathroom",
+          "code": "bathroom",
+          "displayName": "Bathroom",
+          "scenes": [
+            {
+              "name": "1-bathroom",
+              "code": "1-bathroom",
+              "displayName": "Bathroom"
+            },
+            {
+              "name": "2-bathroom",
+              "code": "2-bathroom",
+              "displayName": "Bathroom"
+            }
+          ]
+        },
+        {
+          "name": "bedroom",
+          "code": "bedroom",
+          "displayName": "Bedroom",
+          "scenes": [
+            {
+              "name": "2-bedroom",
+              "code": "2-bedroom",
+              "displayName": "Bedroom",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "3-bedroom",
+              "code": "3-bedroom",
+              "displayName": "Bedroom",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "4-bedroom",
+              "code": "4-bedroom",
+              "displayName": "Bedroom",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "5-bedroom",
+              "code": "5-bedroom",
+              "displayName": "Bedroom",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "6-bedroom",
+              "code": "6-bedroom",
+              "displayName": "Bedroom",
+              "metaData": {
+                "isLocal": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "kitchen",
+          "code": "kitchen",
+          "displayName": "Kitchen",
+          "scenes": [
+            {
+              "name": "kitchen-1",
+              "code": "kitchen-1",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "1-dining",
+              "code": "1-dining",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "1-kitchen",
+              "code": "1-kitchen",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "2-kitchen",
+              "code": "2-kitchen",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "3-kitchen",
+              "code": "3-kitchen",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "4-kitchen",
+              "code": "4-kitchen",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "5-kitchen",
+              "code": "5-kitchen",
+              "displayName": "Kitchen",
+              "metaData": {
+                "isLocal": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "living-room",
+          "code": "living-room",
+          "displayName": "Living Room",
+          "scenes": [
+            {
+              "name": "1-compact-apartment",
+              "code": "1-compact-apartment",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "1-living-room",
+              "code": "1-living-room",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "4-living-room",
+              "code": "4-living-room",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "6-living-room",
+              "code": "6-living-room",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "7-living-room",
+              "code": "7-living-room",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "8-living-room",
+              "code": "8-living-room",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "9-living-room",
+              "code": "9-living-room",
+              "displayName": "Living Room",
+              "metaData": {
+                "isLocal": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "office",
+          "code": "office",
+          "displayName": "Office",
+          "scenes": [
+            {
+              "name": "1-business",
+              "code": "1-business",
+              "displayName": "Office",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "1-office",
+              "code": "1-office",
+              "displayName": "Office",
+              "metaData": {
+                "isLocal": false
+              }
+            },
+            {
+              "name": "2-lobby",
+              "code": "2-lobby",
+              "displayName": "Office",
+              "metaData": {
+                "isLocal": false
+              }
+            }
+          ]
+        }
+      ],
+      "collections": [
+        {
+          "name": "cambridge-hall",
+          "code": "cambridge-hall",
+          "displayName": "Cambridge Hall",
+          "metaData": {},
+          "products": [
+            {
+              "name": "bellewood",
+              "code": "bellewood",
+              "displayName": "Bellewood",
+              "ppi": 28.44,
+              "thumbnail": "textures/Bellewood/thumbnail.jpg",
+              "albedo": "textures/Bellewood/tiled_diffuse.jpg",
+              "normals": "textures/Bellewood/tiled_normals.jpg",
+              "specular": "textures/Bellewood/tiled_specular.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#cambridge-hall",
+                "preview": "textures/Bellewood/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Bellewood/tiled_diffuse.jpg",
+                "normals": "textures/Bellewood/tiled_normals.jpg",
+                "specular": "textures/Bellewood/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "bent-creek",
+              "code": "bent-creek",
+              "displayName": "Bent Creek",
+              "ppi": 28.44,
+              "thumbnail": "textures/Bent Creek/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#cambridge-hall",
+                "preview": "textures/Bent Creek/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Bent Creek/tiled_diffuse.jpg",
+                "normals": "textures/Bent Creek/tiled_normals.jpg",
+                "specular": "textures/Bent Creek/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "lodge-pine",
+              "code": "lodge-pine",
+              "displayName": "Lodge Pine",
+              "ppi": 36.57,
+              "thumbnail": "textures/Lodge Pine/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#cambridge-hall",
+                "preview": "textures/Lodge Pine/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Lodge Pine/tiled_diffuse.jpg",
+                "normals": "textures/Lodge Pine/tiled_normals.jpg",
+                "specular": "textures/Lodge Pine/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "monaco",
+              "code": "monaco",
+              "displayName": "Monaco",
+              "ppi": 36.57,
+              "thumbnail": "textures/Monaco/thumbnail.jpg",
+              "preview": "textures/Monaco/preview.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#cambridge-hall",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Monaco/tiled_diffuse.jpg",
+                "normals": "textures/Monaco/tiled_normals.jpg",
+                "specular": "textures/Monaco/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "pub-house",
+              "code": "pub-house",
+              "displayName": "Pub House",
+              "ppi": 36.57,
+              "thumbnail": "textures/Pub House/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#cambridge-hall",
+                "preview": "textures/Pub House/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Pub House/tiled_diffuse.jpg",
+                "normals": "textures/Pub House/tiled_normals.jpg",
+                "specular": "textures/Pub House/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "serene-hills",
+              "code": "serene-hills",
+              "displayName": "Serene Hills",
+              "ppi": 28.44,
+              "thumbnail": "textures/Serene Hills/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#cambridge-hall",
+                "preview": "textures/Serene Hills/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Serene Hills/tiled_diffuse.jpg",
+                "normals": "textures/Serene Hills/tiled_normals.jpg",
+                "specular": "textures/Serene Hills/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "diamond-board",
+          "code": "diamond-board",
+          "displayName": "Diamond Board",
+          "metaData": {},
+          "products": [
+            {
+              "name": "carmel-distressed-pine",
+              "code": "carmel-distressed-pine",
+              "displayName": "Carmel Distressed Pine",
+              "ppi": 36.57,
+              "thumbnail": "textures/Carmel Distressed Pine/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#diamond-board",
+                "preview": "textures/Carmel Distressed Pine/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Carmel Distressed Pine/tiled_diffuse.jpg",
+                "normals": "textures/Carmel Distressed Pine/tiled_normals.jpg",
+                "specular": "textures/Carmel Distressed Pine/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "carmel-distressed-pine",
+              "code": "carmel-distressed-pine",
+              "displayName": "Historic Kirsche",
+              "ppi": 36.57,
+              "thumbnail": "textures/Historic Kirsche/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#diamond-board",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Historic Kirsche/tiled_diffuse.jpg",
+                "normals": "textures/Historic Kirsche/tiled_normals.jpg",
+                "specular": "textures/Historic Kirsche/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "montrose",
+              "code": "monstrose",
+              "displayName": "Montrose",
+              "ppi": 36.57,
+              "thumbnail": "textures/Montrose/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#diamond-board",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Montrose/tiled_diffuse.jpg",
+                "normals": "textures/Montrose/tiled_normals.jpg",
+                "specular": "textures/Montrose/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "rustic-hickory",
+              "code": "rustic-hickory",
+              "displayName": "Rustic Hickory",
+              "ppi": 36.57,
+              "thumbnail": "textures/Rustic Hickory/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#diamond-board",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Rustic Hickory/tiled_diffuse.jpg",
+                "normals": "textures/Rustic Hickory/tiled_normals.jpg",
+                "specular": "textures/Rustic Hickory/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "highlands",
+          "code": "highlands",
+          "displayName": "Highlands",
+          "metaData": {},
+          "products": [
+            {
+              "name": "ashbury",
+              "code": "ashbury",
+              "displayName": "Ashbury",
+              "ppi": 36.57,
+              "thumbnail": "textures/Ashbury/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Ashbury/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Ashbury/tiled_diffuse.jpg",
+                "normals": "textures/Ashbury/tiled_normals.jpg",
+                "specular": "textures/Ashbury/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "carlsbad",
+              "code": "carlsbad",
+              "displayName": "Carlsbad",
+              "ppi": 36.57,
+              "thumbnail": "textures/Carlsbad/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Carlsbad/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Carlsbad/tiled_diffuse.jpg",
+                "normals": "textures/Carlsbad/tiled_normals.jpg",
+                "specular": "textures/Carlsbad/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "glenbrook",
+              "code": "glenbrook",
+              "displayName": "Glenbrook",
+              "ppi": 36.57,
+              "thumbnail": "textures/Glenbrook/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Glenbrook/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Glenbrook/tiled_diffuse.jpg",
+                "normals": "textures/Glenbrook/tiled_normals.jpg",
+                "specular": "textures/Glenbrook/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "mineral-oak",
+              "code": "mineral-oak",
+              "displayName": "Mineral Oak",
+              "ppi": 36.57,
+              "thumbnail": "textures/Mineral Oak/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Mineral Oak/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Mineral Oak/tiled_diffuse.jpg",
+                "normals": "textures/Mineral Oak/tiled_normals.jpg",
+                "specular": "textures/Mineral Oak/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "mystic-cypress",
+              "code": "mystic-cypress",
+              "displayName": "Mystic Cypress",
+              "ppi": 36.57,
+              "thumbnail": "textures/Mystic Cypress/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Mystic Cypress/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Mystic Cypress/tiled_diffuse.jpg",
+                "normals": "textures/Mystic Cypress/tiled_normals.jpg",
+                "specular": "textures/Mystic Cypress/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "navajo-hills",
+              "code": "navajo-hills",
+              "displayName": "Navajo Hills",
+              "ppi": 36.57,
+              "thumbnail": "textures/Navajo Hills/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Navajo Hills/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Navajo Hills/tiled_diffuse.jpg",
+                "normals": "textures/Navajo Hills/tiled_normals.jpg",
+                "specular": "textures/Navajo Hills/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "pacific-walnut",
+              "code": "pacific-walnut",
+              "displayName": "Pacific Walnut",
+              "ppi": 36.57,
+              "thumbnail": "textures/Pacific Walnut/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Pacific Walnut/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Pacific Walnut/tiled_diffuse.jpg",
+                "normals": "textures/Pacific Walnut/tiled_normals.jpg",
+                "specular": "textures/Pacific Walnut/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "pinion-pine",
+              "code": "pinion-pine",
+              "displayName": "Pinion Pine",
+              "ppi": 36.57,
+              "thumbnail": "textures/Pinion Pine/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Pinion Pine/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Pinion Pine/tiled_diffuse.jpg",
+                "normals": "textures/Pinion Pine/tiled_normals.jpg",
+                "specular": "textures/Pinion Pine/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "prairie",
+              "code": "prairie",
+              "displayName": "Prairie",
+              "ppi": 36.57,
+              "thumbnail": "textures/Prairie/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Prairie/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Prairie/tiled_diffuse.jpg",
+                "normals": "textures/Prairie/tiled_normals.jpg",
+                "specular": "textures/Prairie/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "smokey-mountain",
+              "code": "smokey-mountain",
+              "displayName": "Smokey Mountain",
+              "ppi": 36.57,
+              "thumbnail": "textures/Smokey Mountain/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#highlands",
+                "preview": "textures/Smokey Mountain/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Smokey Mountain/tiled_diffuse.jpg",
+                "normals": "textures/Smokey Mountain/tiled_normals.jpg",
+                "specular": "textures/Smokey Mountain/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "kensington-manor",
+          "code": "kensington-manor",
+          "displayName": "Kensington Manor",
+          "metaData": {},
+          "products": [
+            {
+              "name": "natchez",
+              "code": "natchez",
+              "displayName": "Natchez",
+              "ppi": 36.57,
+              "thumbnail": "textures/Natchez/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Natchez/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Natchez/tiled_diffuse.jpg",
+                "normals": "textures/Natchez/tiled_normals.jpg",
+                "specular": "textures/Natchez/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "athens",
+              "code": "athens",
+              "displayName": "Athens",
+              "ppi": 36.57,
+              "thumbnail": "textures/Athens/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Athens/tiled_diffuse.jpg",
+                "normals": "textures/Athens/tiled_normals.jpg",
+                "specular": "textures/Athens/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "mojave",
+              "code": "mojave",
+              "displayName": "Mojave",
+              "ppi": 36.57,
+              "thumbnail": "textures/Mojave/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Mojave/tiled_diffuse.jpg",
+                "normals": "textures/Mojave/tiled_normals.jpg",
+                "specular": "textures/Mojave/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "olympia",
+              "code": "olympia",
+              "displayName": "Olympia",
+              "ppi": 36.57,
+              "thumbnail": "textures/Olympia/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Olympia/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Olympia/tiled_diffuse.jpg",
+                "normals": "textures/Olympia/tiled_normals.jpg",
+                "specular": "textures/Olympia/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "southern-pine",
+              "code": "southern-pine",
+              "displayName": "Southern Pine",
+              "ppi": 36.57,
+              "thumbnail": "textures/Southern Pine/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Southern Pine/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Southern Pine/tiled_diffuse.jpg",
+                "normals": "textures/Southern Pine/tiled_normals.jpg",
+                "specular": "textures/Southern Pine/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "valley-farmhouse",
+              "code": "valley-farmhouse",
+              "displayName": "Valley Farmhouse",
+              "ppi": 73.14,
+              "thumbnail": "textures/Valley Farmhouse/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#valley-farmhouse",
+                "preview": "textures/Valley Farmhouse/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Valley Farmhouse/tiled_diffuse.jpg",
+                "normals": "textures/Valley Farmhouse/tiled_normals.jpg",
+                "specular": "textures/Valley Farmhouse/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "virginia",
+              "code": "virginia",
+              "displayName": "Virginia",
+              "ppi": 36.57,
+              "thumbnail": "textures/Virginia/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Virginia/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Virginia/tiled_diffuse.jpg",
+                "normals": "textures/Virginia/tiled_normals.jpg",
+                "specular": "textures/Virginia/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            }
+          ]
+        },
+        {
+          "name": "premier",
+          "code": "premier",
+          "displayName": "Premier",
+          "metaData": {},
+          "products": [
+            {
+              "name": "bay-port",
+              "code": "bay-port",
+              "displayName": "Bay Port",
+              "ppi": 28.44,
+              "thumbnail": "textures/Bay Port/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Bay Port/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Bay Port/tiled_diffuse.jpg",
+                "normals": "textures/Bay Port/tiled_normals.jpg",
+                "specular": "textures/Bay Port/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "biscayne-bay",
+              "code": "biscayne-bay",
+              "displayName": "Biscayne Bay",
+              "ppi": 28.44,
+              "thumbnail": "textures/Biscayne Bay/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Biscayne Bay/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Biscayne Bay/tiled_diffuse.jpg",
+                "normals": "textures/Biscayne Bay/tiled_normals.jpg",
+                "specular": "textures/Biscayne Bay/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "cedar-key",
+              "code": "cedar-key",
+              "displayName": "Cedar Key",
+              "ppi": 28.44,
+              "thumbnail": "textures/Cedar Key/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Cedar Key/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Cedar Key/tiled_diffuse.jpg",
+                "normals": "textures/Cedar Key/tiled_normals.jpg",
+                "specular": "textures/Cedar Key/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "coral-cove",
+              "code": "coral-cove",
+              "displayName": "Coral Cove",
+              "ppi": 28.44,
+              "thumbnail": "textures/Coral Cove/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Coral Cove/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Coral Cove/tiled_diffuse.jpg",
+                "normals": "textures/Coral Cove/tiled_normals.jpg",
+                "specular": "textures/Coral Cove/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "cypress-cove",
+              "code": "cypress-cove",
+              "displayName": "Cypress Cove",
+              "ppi": 28.44,
+              "thumbnail": "textures/Cypress Cove/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Cypress Cove/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Cypress Cove/tiled_diffuse.jpg",
+                "normals": "textures/Cypress Cove/tiled_normals.jpg",
+                "specular": "textures/Cypress Cove/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "gulf-harbor",
+              "code": "gulf-harbor",
+              "displayName": "Gulf Harbor",
+              "ppi": 28.44,
+              "thumbnail": "textures/Gulf Harbor/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Gulf Harbor/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Gulf Harbor/tiled_diffuse.jpg",
+                "normals": "textures/Gulf Harbor/tiled_normals.jpg",
+                "specular": "textures/Gulf Harbor/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "heron-bay",
+              "code": "heron-bay",
+              "displayName": "Heron Bay",
+              "ppi": 28.44,
+              "thumbnail": "textures/Heron Bay/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Heron Bay/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Heron Bay/tiled_diffuse.jpg",
+                "normals": "textures/Heron Bay/tiled_normals.jpg",
+                "specular": "textures/Heron Bay/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "key-largo",
+              "code": "key-largo",
+              "displayName": "Key Largo",
+              "ppi": 28.44,
+              "thumbnail": "textures/Key Largo/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Key Largo/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Key Largo/tiled_diffuse.jpg",
+                "normals": "textures/Key Largo/tiled_normals.jpg",
+                "specular": "textures/Key Largo/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "lighthouse-point",
+              "code": "lighthouse-point",
+              "displayName": "Lighthouse Point",
+              "ppi": 28.44,
+              "thumbnail": "textures/Lighthouse Point/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Lighthouse Point/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Lighthouse Point/tiled_diffuse.jpg",
+                "normals": "textures/Lighthouse Point/tiled_normals.jpg",
+                "specular": "textures/Lighthouse Point/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "regatta-bay",
+              "code": "regatta-bay",
+              "displayName": "Regatta Bay",
+              "ppi": 28.44,
+              "thumbnail": "textures/Regatta Bay/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "preview": "textures/Regatta Bay/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Regatta Bay/tiled_diffuse.jpg",
+                "normals": "textures/Regatta Bay/tiled_normals.jpg",
+                "specular": "textures/Regatta Bay/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "sanibel-island",
+              "code": "sanibel-island",
+              "displayName": "Sanibel Island",
+              "ppi": 28.44,
+              "thumbnail": "textures/Sanibel Island/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#kensington",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.0mm EVA"},
+                  {"Overall Thickness": "4.2mm"},
+                  {"Wear Layer": "8 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Antique Wood Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Sanibel Island/tiled_diffuse.jpg",
+                "normals": "textures/Sanibel Island/tiled_normals.jpg",
+                "specular": "textures/Sanibel Island/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "revolutions",
+          "code": "revolutions",
+          "displayName": "Revolutions",
+          "metaData": {},
+          "products": [
+            {
+              "name": "bunker-hill",
+              "code": "bunker-hill",
+              "displayName": "Bunker Hill",
+              "ppi": 36.57,
+              "thumbnail": "textures/Bunker Hill/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#revolutions",
+                "preview": "textures/Bunker Hill/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "5.0mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Embossed In Register (EIR)"},
+                  {"Edge": "Enhanced Natural V-Groove"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Bunker Hill/tiled_diffuse.jpg",
+                "normals": "textures/Bunker Hill/tiled_normals.jpg",
+                "specular": "textures/Bunker Hill/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "concord",
+              "code": "concord",
+              "displayName": "Concord",
+              "ppi": 36.57,
+              "thumbnail": "textures/Concord/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#revolutions",
+                "preview": "textures/Concord/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "5.0mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Embossed In Register (EIR)"},
+                  {"Edge": "Enhanced Natural V-Groove"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Concord/tiled_diffuse.jpg",
+                "normals": "textures/Concord/tiled_normals.jpg",
+                "specular": "textures/Concord/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "lexington",
+              "code": "lexington",
+              "displayName": "Lexington",
+              "ppi": 36.57,
+              "thumbnail": "textures/Lexington/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#revolutions",
+                "preview": "textures/Lexington/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "5.0mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Embossed In Register (EIR)"},
+                  {"Edge": "Enhanced Natural V-Groove"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Lexington/tiled_diffuse.jpg",
+                "normals": "textures/Lexington/tiled_normals.jpg",
+                "specular": "textures/Lexington/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "saratoga",
+              "code": "saratoga",
+              "displayName": "Saratoga",
+              "ppi": 36.57,
+              "thumbnail": "textures/Saratoga/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#revolutions",
+                "preview": "textures/Saratoga/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "5.0mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Embossed In Register (EIR)"},
+                  {"Edge": "Enhanced Natural V-Groove"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Saratoga/tiled_diffuse.jpg",
+                "normals": "textures/Saratoga/tiled_normals.jpg",
+                "specular": "textures/Saratoga/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "trenton",
+              "code": "trenton",
+              "displayName": "Trenton",
+              "ppi": 36.57,
+              "thumbnail": "textures/Trenton/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#revolutions",
+                "preview": "textures/Trenton/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "5.0mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Embossed In Register (EIR)"},
+                  {"Edge": "Enhanced Natural V-Groove"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Trenton/tiled_diffuse.jpg",
+                "normals": "textures/Trenton/tiled_normals.jpg",
+                "specular": "textures/Trenton/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "yorktown",
+              "code": "yorktown",
+              "displayName": "Yorktown",
+              "ppi": 36.57,
+              "thumbnail": "textures/Yorktown/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#revolutions",
+                "preview": "textures/Yorktown/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "5.0mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Embossed In Register (EIR)"},
+                  {"Edge": "Enhanced Natural V-Groove"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Yorktown/tiled_diffuse.jpg",
+                "normals": "textures/Yorktown/tiled_normals.jpg",
+                "specular": "textures/Yorktown/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "richburg-hills",
+          "code": "richburg-hills",
+          "displayName": "Richburg Hills",
+          "metaData": {},
+          "products": [
+            {
+              "name": "campfire",
+              "code": "campfire",
+              "displayName": "Campfire",
+              "ppi": 28.44,
+              "thumbnail": "textures/Campfire/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Campfire/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Campfire/tiled_diffuse.jpg",
+                "normals": "textures/Campfire/tiled_normals.jpg",
+                "specular": "textures/Campfire/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "country-cabin",
+              "code": "country-cabin",
+              "displayName": "Country Cabin",
+              "ppi": 28.44,
+              "thumbnail": "textures/Country Cabin/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#richburg-hills",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Country Cabin/tiled_diffuse.jpg",
+                "normals": "textures/Country Cabin/tiled_normals.jpg",
+                "specular": "textures/Country Cabin/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "piedmont",
+              "code": "piedmont",
+              "displayName": "Piedmont",
+              "ppi": 28.44,
+              "thumbnail": "textures/Piedmont/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#richburg-hills",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Piedmont/tiled_diffuse.jpg",
+                "normals": "textures/Piedmont/tiled_normals.jpg",
+                "specular": "textures/Piedmont/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "roanoake",
+              "code": "roanoake",
+              "displayName": "Roanoake",
+              "ppi": 28.44,
+              "thumbnail": "textures/Roanoake/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#richburg-hills",
+                "specifications": [
+                  {"Plank Size": "9″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Roanoake/tiled_diffuse.jpg",
+                "normals": "textures/Roanoake/tiled_normals.jpg",
+                "specular": "textures/Roanoake/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "rock-solid-performance",
+          "code": "rock-solid-performance",
+          "displayName": "Rock Solid Performance",
+          "metaData": {},
+          "products": [
+            {
+              "name": "helena",
+              "code": "helena",
+              "displayName": "Helena",
+              "ppi": 28.44,
+              "thumbnail": "textures/Helena/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Helena/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Helena/tiled_diffuse.jpg",
+                "normals": "textures/Helena/tiled_normals.jpg",
+                "specular": "textures/Helena/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "morning-mesa",
+              "code": "morning-mesa",
+              "displayName": "Morning Mesa",
+              "ppi": 36.57,
+              "thumbnail": "textures/Morning Mesa/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Morning Mesa/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Morning Mesa/tiled_diffuse.jpg",
+                "normals": "textures/Morning Mesa/tiled_normals.jpg",
+                "specular": "textures/Morning Mesa/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "springfield",
+              "code": "springfield",
+              "displayName": "Springfield",
+              "ppi": 36.57,
+              "thumbnail": "textures/Springfield/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Springfield/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Springfield/tiled_diffuse.jpg",
+                "normals": "textures/Springfield/tiled_normals.jpg",
+                "specular": "textures/Springfield/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "hillsboro",
+              "code": "hillsboro",
+              "displayName": "Hillsboro",
+              "ppi": 28.44,
+              "thumbnail": "textures/Hillsboro/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Hillsboro/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Hillsboro/tiled_diffuse.jpg",
+                "normals": "textures/Hillsboro/tiled_normals.jpg",
+                "specular": "textures/Hillsboro/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "park-hill",
+              "code": "park-hill",
+              "displayName": "Park Hill",
+              "ppi": 36.57,
+              "thumbnail": "textures/Park Hill/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Park Hill/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Park Hill/tiled_diffuse.jpg",
+                "normals": "textures/Park Hill/tiled_normals.jpg",
+                "specular": "textures/Park Hill/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "pelham",
+              "code": "pelham",
+              "displayName": "Pelham",
+              "ppi": 28.44,
+              "thumbnail": "textures/Pelham/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Pelham/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Pelham/tiled_diffuse.jpg",
+                "normals": "textures/Pelham/tiled_normals.jpg",
+                "specular": "textures/Pelham/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            },
+            {
+              "name": "sunset",
+              "code": "sunset",
+              "displayName": "Sunset",
+              "ppi": 36.57,
+              "thumbnail": "textures/Sunset/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Sunset/tiled_diffuse.jpg",
+                "normals": "textures/Sunset/tiled_normals.jpg",
+                "specular": "textures/Sunset/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "townsend",
+              "code": "townsend",
+              "displayName": "Townsend",
+              "ppi": 28.44,
+              "thumbnail": "textures/Townsend/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/direct-container-collections/direct-container-rigid-core-flooring/#richburg-hills",
+                "preview": "textures/Townsend/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "9″ x 60″"},
+                  {"Padding": "1.0mm Embossed IXPE"},
+                  {"Overall Thickness": "4.8mm"},
+                  {"Wear Layer": "12 mil"},
+                  {"Locking Type": "Click Lock"},
+                  {"Edge": "Painted Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Townsend/tiled_diffuse.jpg",
+                "normals": "textures/Townsend/tiled_normals.jpg",
+                "specular": "textures/Townsend/tiled_specular.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "name": "wellington-heights",
+          "code": "wellington-heights",
+          "displayName": "Wellington Heights",
+          "metaData": {},
+          "products": [
+            {
+              "name": "huntington-oak",
+              "code": "huntington-oak",
+              "displayName": "Huntington Oak",
+              "ppi": 36.57,
+              "thumbnail": "textures/Huntington Oak/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#wellington-heights",
+                "preview": "textures/Huntington Oak/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "20 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Huntington Oak/tiled_diffuse.jpg",
+                "normals": "textures/Huntington Oak/tiled_normals.jpg",
+                "specular": "textures/Huntington Oak/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "normandy-coast",
+              "code": "normandy-coast",
+              "displayName": "Normandy Coast",
+              "ppi": 36.57,
+              "thumbnail": "textures/Normandy Coast/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#wellington-heights",
+                "preview": "textures/Normandy Coast/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "20 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Normandy Coast/tiled_diffuse.jpg",
+                "normals": "textures/Normandy Coast/tiled_normals.jpg",
+                "specular": "textures/Normandy Coast/tiled_specular.jpg"
+              }
+            },
+            {
+              "name": "richmond",
+              "code": "richmond",
+              "displayName": "Richmond",
+              "ppi": 36.57,
+              "thumbnail": "textures/Richmond/thumbnail.jpg",
+              "details": {
+                "url": "https://garrisoncollection.com/products/master-designs-in-stock-collections/master-designs-rigid-core-flooring/#wellington-heights",
+                "preview": "textures/Richmond/preview.jpg",
+                "specifications": [
+                  {"Plank Size": "7″ x 48″"},
+                  {"Padding": "1.5mm Embossed EVA"},
+                  {"Overall Thickness": "5.5mm"},
+                  {"Wear Layer": "20 mil"},
+                  {"Locking Type": "Drop Lock"},
+                  {"Surface": "Deep Wood Grain Embossing"},
+                  {"Edge": "Micro Bevel"}
+                ]
+              },
+              "metaData": {
+                "albedo": "textures/Richmond/tiled_diffuse.jpg",
+                "normals": "textures/Richmond/tiled_normals.jpg",
+                "specular": "textures/Richmond/tiled_specular.jpg",
+                "isLightColor": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
