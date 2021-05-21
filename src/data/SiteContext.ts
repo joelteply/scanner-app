@@ -1,5 +1,5 @@
 import {createContext, Dispatch} from "react"
-import {CBARSceneProperties, CBContentManager, CBMaterialProperties} from "react-home-ar";
+import {CBContentManager, CBMaterialProperties} from "react-home-ar";
 import { polyfill } from "smoothscroll-polyfill"
 import {BrowserProperties} from "react-client-info";
 import * as qs from "querystring";
@@ -32,7 +32,6 @@ export type SharableVisualizerState = {
 }
 
 export type DerivedVisualizerState = {
-    sceneData:CBARSceneProperties | undefined
     materialProperties: CBMaterialProperties | null
     onMaterialTextureChanged: ((path: string) => (void)) | null
     previewWidth: number | null
@@ -64,7 +63,6 @@ export function createEmptyState(): SiteState {
         selectedRoom:null,
 
         // Visualizer derived
-        sceneData: undefined,
         materialProperties: null,
         onMaterialTextureChanged: null,
         previewWidth: null,
@@ -106,11 +104,6 @@ export type SiteActionSetColor = {
 export type SiteActionSetSiteData = {
     type: "setSiteData"
     siteData: SiteConfig
-}
-
-export type SiteActionSetSceneData = {
-    type: "setSceneData"
-    sceneData: CBARSceneProperties | undefined
 }
 
 export type SiteActionSetSelectedSampleRoom = {
@@ -158,7 +151,7 @@ export type ShawActionSetFloorTranslation = {
     yPos: number | null
 }
 
-export type SiteAction = SiteActionSetBrowserProperties | SiteActionSetError | SiteActionSetSceneData | SiteActionSetFov |
+export type SiteAction = SiteActionSetBrowserProperties | SiteActionSetError | SiteActionSetFov |
     SiteActionSetPosition | SiteActionSetRotation | SiteActionSetShowControls | ShawActionSetFloorTranslation
     | SiteActionSetSelectedSampleRoom | SiteActionSetSelectedSampleRoomType | SiteActionSetSelectedRoom | SiteActionClearRoomData
     | SiteActionSetCollection | SiteActionSetProduct | SiteActionSetColor | SiteActionSetSiteData;
@@ -177,10 +170,6 @@ export function siteStateReducer(state: SiteState, action: SiteAction): SiteStat
             newState.error = action.error;
             break;
 
-        // Visualizer derived
-        case "setSceneData":
-            newState.sceneData = action.sceneData;
-            break;
         case "setShowControls":
             newState.showControls = action.showControls;
             break;

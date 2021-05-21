@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import './Scanner.css'
 
 import {
-    CBARContext, CBAREvent,
+    CBARContext,
     CBARView,
     cbInitialize
 } from "react-home-ar";
@@ -24,7 +24,7 @@ if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPL
 
 export default function Scanner() {
     const _isMounted = useRef(false);
-    const [context, setContext] = useState<CBARContext>();
+    const [, setContext] = useState<CBARContext>();
 
     useEffect(() => {
         _isMounted.current = true;
@@ -34,23 +34,14 @@ export default function Scanner() {
         }
     }, []);
 
-    const handleVisualizerEvent = useCallback((event:CBAREvent) => {
-
-    }, []);
-
     const ready = useCallback((context:CBARContext) => {
         context.startVideoCamera();
+
         setContext(context);
     }, []);
 
-    useEffect(() => {
-        if (context) {
-            context.setHandler(handleVisualizerEvent)
-        }
-    }, [context, handleVisualizerEvent]);
-
     return useMemo(() => (
-        <div>
+        <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
         </div>
     ), [ready])
