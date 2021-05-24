@@ -7,15 +7,11 @@ import {
     cbInitialize
 } from "react-home-ar";
 
-import orientationImage from "../data/orientation6.jpg";
-
 if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
     cbInitialize({
         hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
         signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
         processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
-        orientationImage:orientationImage,
-        opencvJsLocation:"assets/opencv.js",
         placeholderPath:"assets/img/blue-tile.png"
     })
 } else {
