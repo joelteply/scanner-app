@@ -10,8 +10,6 @@ RUN npm run build
 # 2. Copy built files into nginx container
 FROM public.ecr.aws/j7v0i7y2/client-resources:nginx-1.17-alpine
 
-RUN mkdir -p /opt/server/sites
-COPY --from=build-stage /app/build/config /opt/server/config
 COPY --from=build-stage /app/build/ /usr/share/nginx/html
 COPY --from=build-stage /app/nginx.conf /etc/nginx/nginx.conf
 
