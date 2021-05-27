@@ -3,6 +3,7 @@
   "version": "0.3.00",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "@types/jsonp": "^0.2.0",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.4",

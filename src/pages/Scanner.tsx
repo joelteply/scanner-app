@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react'
+import React, {createRef, useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import './Scanner.css'
 
 import {
@@ -6,6 +6,7 @@ import {
     CBARView,
     cbInitialize
 } from "react-home-ar";
+import {Fab, Icon} from "@material-ui/core";
 
 if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
     cbInitialize({
@@ -20,7 +21,8 @@ if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPL
 
 export default function Scanner() {
     const _isMounted = useRef(false);
-    const [, setContext] = useState<CBARContext>();
+    const [context, setContext] = useState<CBARContext>();
+    const permissionsBox = createRef<HTMLDivElement>();
 
     useEffect(() => {
         _isMounted.current = true;
@@ -31,14 +33,26 @@ export default function Scanner() {
     }, []);
 
     const ready = useCallback((context:CBARContext) => {
-        context.startVideoCamera();
-
         setContext(context);
     }, []);
+
+    const startCapture = useCallback(() => {
+        if (context) {
+            if (permissionsBox.current) {
+                permissionsBox.current.hidden = true;
+            }
+            context.startVideoCamera();
+        }
+    }, [context, permissionsBox]);
 
     return useMemo(() => (
         <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
+            <div ref={permissionsBox} className={"permissions-overlay"}>
+                <Fab onClick={startCapture} title={"Start Camera"}>
+                    <Icon>camera</Icon>
+                </Fab>
+            </div>
         </div>
-    ), [ready])
+    ), [permissionsBox, ready, startCapture])
 }
