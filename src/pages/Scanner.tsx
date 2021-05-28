@@ -6,7 +6,7 @@ import {
     CBARView,
     cbInitialize
 } from "react-home-ar";
-import {Fab, Icon} from "@material-ui/core";
+import {Button, Icon} from "@material-ui/core";
 
 if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
     cbInitialize({
@@ -38,10 +38,10 @@ export default function Scanner() {
 
     const startCapture = useCallback(() => {
         if (context) {
-            if (permissionsBox.current) {
-                permissionsBox.current.hidden = true;
-            }
             context.startVideoCamera();
+            if (permissionsBox.current) {
+                permissionsBox.current.style.display = "none";
+            }
         }
     }, [context, permissionsBox]);
 
@@ -49,9 +49,14 @@ export default function Scanner() {
         <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
             <div ref={permissionsBox} className={"permissions-overlay"}>
-                <Fab onClick={startCapture} title={"Start Camera"}>
-                    <Icon>camera</Icon>
-                </Fab>
+                <div>
+                    <Button className={"button"} variant="contained" onClick={()=>startCapture()}>
+                        <div className={"button-content"}>
+                            <Icon className={"button-icon"}>photo_camera</Icon>
+                            <div className={"button-text"}>Start Capture</div>
+                        </div>
+                    </Button>
+                </div>
             </div>
         </div>
     ), [permissionsBox, ready, startCapture])
