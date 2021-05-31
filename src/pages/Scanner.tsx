@@ -62,11 +62,12 @@ export default function Scanner() {
             </div>
             <div className={"feature-selector"}>
                 <InputLabel id="label">Feature Type</InputLabel>
-                <Select labelId="label" id="select" value={context?.featureMode}
+                <Select labelId="label" id="select" defaultValue={CBARFeatureTracking.None}
                         onChange={(event)=>{if (context) {context.featureMode = event.target.value as CBARFeatureTracking}}} >
                     <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
                     <MenuItem value={CBARFeatureTracking.HoughLines}>Hough</MenuItem>
                     <MenuItem value={CBARFeatureTracking.LineSegments}>Line Segments</MenuItem>
+                    <MenuItem value={CBARFeatureTracking.OpticalFlow}>Optical Flow</MenuItem>
                 </Select>
             </div>
         </div>
