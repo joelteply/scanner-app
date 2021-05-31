@@ -29,3 +29,11 @@
 .permissions-overlay .button-content .button-text {
     font-size: 20px;
 }
+
+.feature-selector {
+    position: absolute;
+    top:0;
+    right:0;
+    background: white;
+    user-select: none;
+}

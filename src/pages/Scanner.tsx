@@ -2,11 +2,11 @@ import React, {createRef, useCallback, useEffect, useMemo, useRef, useState} fro
 import './Scanner.css'
 
 import {
-    CBARContext,
+    CBARContext, CBARFeatureTracking,
     CBARView,
     cbInitialize
 } from "react-home-ar";
-import {Button, Icon} from "@material-ui/core";
+import {Button, Icon, InputLabel, MenuItem, Select} from "@material-ui/core";
 
 if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
     cbInitialize({
@@ -38,10 +38,12 @@ export default function Scanner() {
 
     const startCapture = useCallback(() => {
         if (context) {
-            context.startVideoCamera();
-            if (permissionsBox.current) {
-                permissionsBox.current.style.display = "none";
-            }
+            context.startVideoCamera().then(()=>{
+                console.log("capture started");
+                if (permissionsBox.current) {
+                    permissionsBox.current.style.visibility = "hidden";
+                }
+            });
         }
     }, [context, permissionsBox]);
 
@@ -58,6 +60,15 @@ export default function Scanner() {
                     </Button>
                 </div>
             </div>
+            <div className={"feature-selector"}>
+                <InputLabel id="label">Feature Type</InputLabel>
+                <Select labelId="label" id="select" value={context?.featureMode}
+                        onChange={(event)=>{if (context) {context.featureMode = event.target.value as CBARFeatureTracking}}} >
+                    <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
+                    <MenuItem value={CBARFeatureTracking.HoughLines}>Hough</MenuItem>
+                    <MenuItem value={CBARFeatureTracking.LineSegments}>Line Segments</MenuItem>
+                </Select>
+            </div>
         </div>
-    ), [permissionsBox, ready, startCapture])
+    ), [context, permissionsBox, ready, startCapture])
 }
