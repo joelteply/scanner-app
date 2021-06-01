@@ -10,10 +10,14 @@
     justify-content: center;
 }
 
-.permissions-overlay .content > .button {
+.permissions-overlay button {
     margin: 20px;
     object-fit: cover;
     overflow: hidden;
+}
+
+.permissions-overlay button.transparent {
+    opacity: 0.5;
 }
 
 .permissions-overlay .button-content {

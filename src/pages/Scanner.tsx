@@ -1,11 +1,7 @@
-import React, {createRef, useCallback, useEffect, useMemo, useRef, useState} from 'react'
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import './Scanner.css'
 
-import {
-    CBARContext, CBARFeatureTracking,
-    CBARView,
-    cbInitialize
-} from "react-home-ar";
+import {CBARContext, CBARFeatureTracking, CBARMode, CBARView, cbInitialize} from "react-home-ar";
 import {Button, Icon, InputLabel, MenuItem, Select} from "@material-ui/core";
 
 if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
@@ -22,7 +18,7 @@ if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPL
 export default function Scanner() {
     const _isMounted = useRef(false);
     const [context, setContext] = useState<CBARContext>();
-    const permissionsBox = createRef<HTMLDivElement>();
+    const [trackingMode, setTrackingMode] = useState(CBARFeatureTracking.None);
 
     useEffect(() => {
         _isMounted.current = true;
@@ -37,33 +33,42 @@ export default function Scanner() {
     }, []);
 
     const startCapture = useCallback(() => {
-        if (context) {
-            context.startVideoCamera().then(()=>{
-                console.log("capture started");
-                if (permissionsBox.current) {
-                    permissionsBox.current.style.visibility = "hidden";
-                }
-            });
-        }
-    }, [context, permissionsBox]);
+        context?.startVideoCamera(trackingMode).then(()=>{
+            setMode(CBARMode.Video);
+        });
+    }, [context, trackingMode]);
+
+    const stopCapture = useCallback(() => {
+        context?.stopVideoCamera();
+        setMode(CBARMode.None);
+    }, [context]);
+
+    const [mode, setMode] = useState(CBARMode.None);
 
     return useMemo(() => (
         <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
-            <div ref={permissionsBox} className={"permissions-overlay"}>
-                <div>
+            <div className={"permissions-overlay"}>
+                {mode === CBARMode.Video ?
+                    <Button className={"button transparent"} variant="contained" onClick={()=>stopCapture()}>
+                        <div className={"button-content"}>
+                            <Icon className={"button-icon"}>pause</Icon>
+                            <div className={"button-text"}>Pause</div>
+                        </div>
+                    </Button>
+                    :
                     <Button className={"button"} variant="contained" onClick={()=>startCapture()}>
                         <div className={"button-content"}>
                             <Icon className={"button-icon"}>photo_camera</Icon>
                             <div className={"button-text"}>Start Capture</div>
                         </div>
                     </Button>
-                </div>
+                }
             </div>
             <div className={"feature-selector"}>
                 <InputLabel id="label">Feature Type</InputLabel>
-                <Select labelId="label" id="select" defaultValue={CBARFeatureTracking.None}
-                        onChange={(event)=>{if (context) {context.featureMode = event.target.value as CBARFeatureTracking}}} >
+                <Select labelId="label" id="select" value={trackingMode}
+                        onChange={(event)=>setTrackingMode(event.target.value as CBARFeatureTracking)} >
                     <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
                     <MenuItem value={CBARFeatureTracking.HoughLines}>Hough</MenuItem>
                     <MenuItem value={CBARFeatureTracking.LineSegments}>Line Segments</MenuItem>
@@ -71,5 +76,5 @@ export default function Scanner() {
                 </Select>
             </div>
         </div>
-    ), [context, permissionsBox, ready, startCapture])
+    ), [mode, ready, startCapture, stopCapture, trackingMode])
 }
