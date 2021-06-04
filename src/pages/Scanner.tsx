@@ -70,9 +70,8 @@ export default function Scanner() {
                 <Select labelId="label" id="select" value={trackingMode}
                         onChange={(event)=>setTrackingMode(event.target.value as CBARFeatureTracking)} >
                     <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
-                    <MenuItem value={CBARFeatureTracking.HoughLines}>Hough</MenuItem>
+                    <MenuItem value={CBARFeatureTracking.Documents}>Documents</MenuItem>
                     <MenuItem value={CBARFeatureTracking.LineSegments}>Line Segments</MenuItem>
-                    <MenuItem value={CBARFeatureTracking.OpticalFlow}>Optical Flow</MenuItem>
                 </Select>
             </div>
         </div>
