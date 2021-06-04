@@ -17,7 +17,7 @@
 }
 
 .permissions-overlay button.transparent {
-    opacity: 0.5;
+    opacity: 0.33;
 }
 
 .permissions-overlay .button-content {

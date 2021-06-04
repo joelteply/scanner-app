@@ -1,5 +1,5 @@
 {
-  "name": "client-visualizers",
+  "name": "scanner",
   "version": "0.3.00",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "react-app-polyfill": "^2.0.0",
     "react-client-info": "^0.0.22",
     "react-dom": "^17.0.2",
-    "react-home-ar": "^0.0.2040",
+    "react-home-ar": "^0.0.2042",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-transition-group": "^4.4.1",
