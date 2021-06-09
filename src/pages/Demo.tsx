@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react'
-import './Scanner.css'
+import './Demo.css'
 
 import {CBARContext, CBARFeatureTracking, CBARMode, CBARView} from "react-home-ar";
 import {Button, Icon, InputLabel, MenuItem, Select} from "@material-ui/core";
@@ -39,10 +39,10 @@ export default function Demo() {
             <CBARView onContextCreated={ready} />
             <div className={"permissions-overlay"}>
                 {mode === CBARMode.Video ?
-                    <Button className={"button transparent"} variant="contained" onClick={()=>stopCapture()}>
+                    <Button className={"button"} variant="contained" onClick={()=>stopCapture()}>
                         <div className={"button-content"}>
-                            <Icon className={"button-icon"}>pause</Icon>
-                            <div className={"button-text"}>Pause</div>
+                            <Icon className={"button-icon"}>camera</Icon>
+                            <div className={"button-text"}>Capture</div>
                         </div>
                     </Button>
                     :

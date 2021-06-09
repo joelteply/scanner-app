@@ -5,7 +5,7 @@ import cssVars from 'css-vars-ponyfill'
 import React, {useReducer, useEffect, useCallback, useState, useRef} from "react"
 import * as ReactDOM from "react-dom"
 
-import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import {SiteContext, createEmptyState, siteStateReducer, stateToUrl} from "./data/SiteContext"
 import {BrowserProperties, WebClientInfo} from "react-client-info"
 
@@ -296,9 +296,6 @@ function App() {
                             <Switch location={location}>
                                 <Route exact path="/" component={Scanner} />
                                 <Route exact path="/demo" component={Demo} />
-                                <Route>
-                                    <Redirect to="/"/>
-                                </Route>
                             </Switch>
                         </SiteContext.Provider>
                     )

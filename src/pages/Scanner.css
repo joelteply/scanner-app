@@ -1,6 +1,11 @@
+:root {
+    --card-width: 60vw;
+    --card-aspect: 0.5625;
+}
+
 .container {
     width: 100vw;
-    height: 100vh;
+    height: var(--app-height);
     background-color: cornflowerblue;
 }
 
@@ -13,11 +18,11 @@
     top:0;
     left:0;
     width: 100vw;
-    height: 100vh;
+    height: var(--app-height);
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 5vh;
+    padding-bottom: 15vh;
 }
 
 .permissions-overlay button {
@@ -49,29 +54,27 @@
     top: 0;
     left:0;
     width: 100vw;
-    height: 100vh;
+    height: var(--app-height);
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     pointer-events: none;
-
-    margin-top: -10vh;
+    margin-top: 15vh;
 }
 
 .capture-overlay .hole {
-    width: 70vw;
-    height: calc(70vw * 0.5625);
+    width: var(--card-width);
+    height: calc(var(--card-width) * var(--card-aspect));
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-    border-radius: 2vw;
+    border-radius: calc(0.03 * var(--card-width))
 }
 
-.feature-selector {
-    position: absolute;
-    top:0;
-    right:0;
-    background: white;
-    user-select: none;
+/* Mobile Phones Only */
+@media only screen and (max-device-width: 480px) {
+    :root {
+        --card-width: 90vw;
+    }
 }
