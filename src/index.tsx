@@ -14,6 +14,8 @@ import {objectToLowerCase, selectScene} from "./utilities/Methods";
 
 import Scanner from "./pages/Scanner"
 import {ApiCapabilityName, FeatureAppearanceConfig, SiteConfig} from "cambrian-base";
+import Demo from "./pages/Demo";
+import {cbInitialize} from "react-home-ar";
 
 const objectFitImages = require('object-fit-images');
 
@@ -26,6 +28,17 @@ if (!siteName) {
 const isLocal = process.env.REACT_APP_IS_LOCAL==="1";
 export const SITE_PATH = !isLocal && process.env.REACT_APP_SITES_ROOT ? `${process.env.REACT_APP_SITES_ROOT}/${siteName}` : `cambrianar-sites/${siteName}`;
 const CONFIG_PATH = `config/${siteName}.json`;
+
+if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
+    cbInitialize({
+        hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
+        signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
+        processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
+        placeholderPath:"assets/img/blue-tile.png"
+    })
+} else {
+    throw new Error('REACT_APP_CB_GET_UPLOAD_URLS_URL, REACT_APP_CB_UPLOADS_URL, and REACT_APP_CB_SEGMENT_URL must be defined')
+}
 
 export const isFeatureEnabled = (siteData:SiteConfig, name:ApiCapabilityName):boolean => {
     const feature = siteData.features.find(f=>f.name === name);
@@ -281,6 +294,7 @@ function App() {
                             <WebClientInfo onClientStateChanged={setBrowserProperties} />
                             <Switch location={location}>
                                 <Route exact path="/" component={Scanner} />
+                                <Route exact path="/demo" component={Demo} />
                                 <Route>
                                     <Redirect to="/"/>
                                 </Route>

@@ -1,0 +1,43 @@
+
+.permissions-overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.permissions-overlay button {
+    margin: 20px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.permissions-overlay button.transparent {
+    opacity: 0.33;
+}
+
+.permissions-overlay .button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.permissions-overlay .button-content .button-icon {
+    font-size: 100px;
+}
+
+.permissions-overlay .button-content .button-text {
+    font-size: 20px;
+}
+
+.feature-selector {
+    position: absolute;
+    top:0;
+    right:0;
+    background: white;
+    user-select: none;
+}
