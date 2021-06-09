@@ -24,8 +24,8 @@ export default function Scanner() {
     }, [context]);
 
     return useMemo(() => (
-        <div style={{width:"100vw", height:"100vh"}}>
-            <CBARView onContextCreated={ready} />
+        <div className={"container"}>
+            <CBARView className={"visualizer"} onContextCreated={ready} />
 
             <div className={"capture-overlay"}>
                 <div className={"hole"} />

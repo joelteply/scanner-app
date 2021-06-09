@@ -34,7 +34,8 @@ if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPL
         hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
         signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
         processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
-        placeholderPath:"assets/img/blue-tile.png"
+        placeholderPath:"assets/img/blue-tile.png",
+        classifierPath:"assets/haarcascade_eye.xml"
     })
 } else {
     throw new Error('REACT_APP_CB_GET_UPLOAD_URLS_URL, REACT_APP_CB_UPLOADS_URL, and REACT_APP_CB_SEGMENT_URL must be defined')
