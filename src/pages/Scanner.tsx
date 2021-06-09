@@ -26,12 +26,17 @@ export default function Scanner() {
     return useMemo(() => (
         <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
+
+            <div className={"capture-overlay"}>
+                <div className={"hole"} />
+            </div>
+
             <div className={"permissions-overlay"}>
                 {mode === CBARMode.Video ?
-                    <Button className={"button transparent"} variant="contained" onClick={()=>stopCapture()}>
+                    <Button className={"button"} variant="contained" onClick={()=>stopCapture()}>
                         <div className={"button-content"}>
-                            <Icon className={"button-icon"}>pause</Icon>
-                            <div className={"button-text"}>Pause</div>
+                            <Icon className={"button-icon"}>camera</Icon>
+                            <div className={"button-text"}>Capture</div>
                         </div>
                     </Button>
                     :
