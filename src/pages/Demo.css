@@ -39,6 +39,17 @@
     position: absolute;
     top:0;
     right:0;
-    background: white;
     user-select: none;
+    display: flex;
+    justify-content: space-around;
+
+    background: rgba(255,255,255, 0.7);
+    font-weight: bold;
+    width: 50%;
+    max-width: 400px;
+}
+
+.feature-selector label {
+    color: rgba(255,255,150,1.0);
+    font-size: 1.2em;
 }

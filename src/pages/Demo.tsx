@@ -1,13 +1,14 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import './Demo.css'
 
-import {CBARContext, CBARFeatureTracking, CBARMode, CBARView} from "react-home-ar";
+import {CBARContext, CBARFeatureTracking, CBARCameraFacing, CBARMode, CBARView} from "react-home-ar";
 import {Button, Icon, InputLabel, MenuItem, Select} from "@material-ui/core";
 
 export default function Demo() {
     const _isMounted = useRef(false);
     const [context, setContext] = useState<CBARContext>();
     const [trackingMode, setTrackingMode] = useState(CBARFeatureTracking.None);
+    const [facingMode, setFacingMode] = useState(CBARCameraFacing.Default);
 
     useEffect(() => {
         _isMounted.current = true;
@@ -55,15 +56,26 @@ export default function Demo() {
                 }
             </div>
             <div className={"feature-selector"}>
-                <InputLabel id="label">Feature Type</InputLabel>
-                <Select labelId="label" id="select" value={trackingMode}
-                        onChange={(event)=>setTrackingMode(event.target.value as CBARFeatureTracking)} >
-                    <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
-                    <MenuItem value={CBARFeatureTracking.Documents}>Documents</MenuItem>
-                    <MenuItem value={CBARFeatureTracking.Card}>Card</MenuItem>
-                    <MenuItem value={CBARFeatureTracking.InteriorSpace}>Interior Space</MenuItem>
-                </Select>
+                <div>
+                    <InputLabel id="label">Camera Facing</InputLabel>
+                    <Select labelId="label" id="select" value={facingMode}
+                            onChange={(event)=>setFacingMode(event.target.value as CBARCameraFacing)} >
+                        <MenuItem value={CBARCameraFacing.Default}>Default</MenuItem>
+                        <MenuItem value={CBARCameraFacing.User}>Front</MenuItem>
+                        <MenuItem value={CBARCameraFacing.Environment}>Back</MenuItem>
+                    </Select>
+                </div>
+                <div>
+                    <InputLabel id="label">Feature Type</InputLabel>
+                    <Select labelId="label" id="select" value={trackingMode}
+                            onChange={(event)=>setTrackingMode(event.target.value as CBARFeatureTracking)} >
+                        <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
+                        <MenuItem value={CBARFeatureTracking.World}>World</MenuItem>
+                        <MenuItem value={CBARFeatureTracking.Classifier}>Classifier</MenuItem>
+                        <MenuItem value={CBARFeatureTracking.Face}>Face</MenuItem>
+                    </Select>
+                </div>
             </div>
         </div>
-    ), [mode, ready, startCapture, stopCapture, trackingMode])
+    ), [facingMode, mode, ready, startCapture, stopCapture, trackingMode])
 }

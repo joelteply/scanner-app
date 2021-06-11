@@ -13,7 +13,7 @@ export default function Scanner() {
     }, []);
 
     const startCapture = useCallback(() => {
-        context?.startVideoCamera(CBARFeatureTracking.Card).then(()=>{
+        context?.startVideoCamera(CBARFeatureTracking.Classifier).then(()=>{
             setMode(CBARMode.Video);
         });
     }, [context]);
