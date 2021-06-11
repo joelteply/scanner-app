@@ -23,10 +23,10 @@ export default function Demo() {
     }, []);
 
     const startCapture = useCallback(() => {
-        context?.startVideoCamera(trackingMode).then(()=>{
+        context?.startVideoCamera(trackingMode, facingMode).then(()=>{
             setMode(CBARMode.Video);
         });
-    }, [context, trackingMode]);
+    }, [context, facingMode, trackingMode]);
 
     const stopCapture = useCallback(() => {
         context?.stopVideoCamera();
