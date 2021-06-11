@@ -38,23 +38,7 @@ export default function Demo() {
     return useMemo(() => (
         <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
-            <div className={"permissions-overlay"}>
-                {mode === CBARMode.Video ?
-                    <Button className={"button"} variant="contained" onClick={()=>stopCapture()}>
-                        <div className={"button-content"}>
-                            <Icon className={"button-icon"}>camera</Icon>
-                            <div className={"button-text"}>Capture</div>
-                        </div>
-                    </Button>
-                    :
-                    <Button className={"button"} variant="contained" onClick={()=>startCapture()}>
-                        <div className={"button-content"}>
-                            <Icon className={"button-icon"}>photo_camera</Icon>
-                            <div className={"button-text"}>Start Capture</div>
-                        </div>
-                    </Button>
-                }
-            </div>
+
             <div className={"feature-selector"}>
                 <div>
                     <InputLabel id="label">Camera Facing</InputLabel>
@@ -75,6 +59,24 @@ export default function Demo() {
                         <MenuItem value={CBARFeatureTracking.Face}>Face</MenuItem>
                     </Select>
                 </div>
+            </div>
+
+            <div className={"buttons-overlay"}>
+                {mode === CBARMode.Video ?
+                    <Button className={"button"} variant="contained" onClick={()=>stopCapture()}>
+                        <div className={"button-content"}>
+                            <Icon className={"button-icon"}>camera</Icon>
+                            <div className={"button-text"}>Capture</div>
+                        </div>
+                    </Button>
+                    :
+                    <Button className={"button"} variant="contained" onClick={()=>startCapture()}>
+                        <div className={"button-content"}>
+                            <Icon className={"button-icon"}>photo_camera</Icon>
+                            <div className={"button-text"}>Start</div>
+                        </div>
+                    </Button>
+                }
             </div>
         </div>
     ), [facingMode, mode, ready, startCapture, stopCapture, trackingMode])
