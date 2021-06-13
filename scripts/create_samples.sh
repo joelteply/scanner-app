@@ -1,5 +1,10 @@
 
+#following example and some data from https://memememememememe.me/post/training-haar-cascades/
 
+cd negatives
+rm -f negatives.txt
+ls -l1 *.jpg > negatives.txt
+cd ../
 
 opencv_createsamples -img cropped00.jpg \
 -bg negatives/negatives.txt \

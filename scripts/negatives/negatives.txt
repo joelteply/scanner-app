@@ -1,1 +1,0 @@
-#Negatives obtained from ancient repo https://github.com/sonots/tutorial-haartraining/tree/master/data/negatives
