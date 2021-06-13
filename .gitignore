@@ -41,3 +41,5 @@ cambrianar-sites
 .elasticbeanstalk
 scripts/negatives/*.jpg
 /scripts/negatives/negatives.txt
+/scripts/samples
+/scripts/bin

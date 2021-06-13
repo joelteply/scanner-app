@@ -12,8 +12,13 @@ CV_APP_PATH=./bin/darwin
 rm -rf samples/samples.txt
 mkdir -p samples
 
+INFO_PATH=samples/samples_0.txt
+IMG_PATH=positives/cropped_0.jpg
+
 ${CV_APP_PATH}/opencv_createsamples \
--img positives/cropped00.jpg \
+-img ${IMG_PATH} \
 -bg negatives.txt \
--info samples/samples.txt \
--num 128 -w 48 -h 30
+-info ${INFO_PATH} \
+-num 128 -maxxangle 0.0 -maxyangle 0.0 \
+-maxzangle 0.3 -bgcolor 255 -bgthresh 8 \
+-w 48 -h 30
