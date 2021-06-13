@@ -40,3 +40,4 @@ cambrianar-sites
 /server/node_modules
 .elasticbeanstalk
 scripts/negatives/*.jpg
+/scripts/negatives/negatives.txt
