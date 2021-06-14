@@ -8,11 +8,13 @@ classifier_h=30
 
 cd negatives
 
-../bin/darwin/opencv_traincascade -data output \
+mkdir -p output
+
+../bin/darwin/opencv_traincascade -data ../output \
 	-vec ../cropped.vec \
 	-bg negatives.txt \
 	-numPos 1000 -numNeg 600 -numStages 20 \
-	-precalcValBufSize 1024 -precalcIdxBufSize 1024 \
+	-precalcValBufSize 4096 -precalcIdxBufSize 4096 \
 	-featureType HAAR \
 	-minHitRate 0.995 -maxFalseAlarmRate 0.5 \
 	-w ${classifier_w} -h ${classifier_h}
