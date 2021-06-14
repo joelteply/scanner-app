@@ -1,6 +1,6 @@
 
-classifier_w=80
-classifier_h=50
+classifier_w=96
+classifier_h=60
 
 # CV_APP_PATH=bin/darwin
 
@@ -8,13 +8,13 @@ classifier_h=50
 
 cd negatives
 
-mkdir -p output
+mkdir -p ../output
 
 ../bin/darwin/opencv_traincascade -data ../output \
 	-vec ../cropped.vec \
 	-bg negatives.txt \
-	-numPos 1000 -numNeg 600 -numStages 40 \
+	-numPos 1000 -numNeg 600 -numStages 24 \
 	-precalcValBufSize 4096 -precalcIdxBufSize 4096 \
-	-featureType HAAR \
+	-featureType LBP \
 	-minHitRate 0.995 -maxFalseAlarmRate 0.5 \
 	-w ${classifier_w} -h ${classifier_h}

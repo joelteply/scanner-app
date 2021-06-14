@@ -1,6 +1,8 @@
 
 #following example and some data from https://memememememememe.me/post/training-haar-cascades/
 
+#to build the tool: cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_opencv_apps=ON -DBUILD_SHARED_LIBS=OFF ../opencv
+
 #exiftool -q -r -if '$ImageHeight < 480' -if '$ImageWidth < 640' -p '$Directory/$FileName' "negatives" | xargs rm
 
 rm -f negatives/negatives.txt
@@ -17,10 +19,10 @@ rm -rf samples
 mkdir -p samples
 
 index=0
-gen=256
+gen=128
 
-classifier_w=80
-classifier_h=50
+classifier_w=96
+classifier_h=60
 
 #find "negatives" -iname "*.jpg" -type f | xargs -I{} identify -format '%w %h %i' {} | awk '$1<640 || $2<480'
 
@@ -40,20 +42,18 @@ find "positives" \( -iname \*.jpg -o -iname \*.jpeg \) -print0 | while read -r -
 		-bg negatives/negatives.txt \
 		-info ${INFO_PATH} \
 		-num ${gen} \
-		-maxxangle 0.3 -maxyangle 0.4 -maxzangle 0.4 \
 		-w ${classifier_w} -h ${classifier_h}
 
 	if [[ -f "$INFO_PATH" ]]; then
 		index=`expr $index + 1`
 	fi
-
 done
 
 cd samples
 cat samples_*.txt > samples.txt
 cd ..
 
-opencv_createsamples \
+${CV_APP_PATH}/opencv_createsamples \
 	-info samples/samples.txt \
 	-bg negatives/negatives.txt \
 	-vec cropped.vec \

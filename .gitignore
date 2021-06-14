@@ -47,3 +47,4 @@ scripts/negatives/*.jpg
 scripts/*.jpg
 /scripts/samples.txt
 /scripts/negatives.txt
+scripts/output*
