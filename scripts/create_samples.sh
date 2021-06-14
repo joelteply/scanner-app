@@ -2,6 +2,7 @@
 #following example and some data from https://memememememememe.me/post/training-haar-cascades/
 
 #exiftool -q -r -if '$ImageHeight < 480' -if '$ImageWidth < 640' -p '$Directory/$FileName' "negatives" | xargs rm
+rm -f *.jpg
 
 rm -f negatives.txt
 ls -l1 negatives/*.jpg > negatives.txt
@@ -52,5 +53,7 @@ opencv_createsamples \
 	-bg negatives.txt \
 	-vec cropped.vec \
 	-num 1920 -w 128 -h 80
+
+rm -f *.jpg
 
 
