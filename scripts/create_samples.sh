@@ -21,8 +21,8 @@ mkdir -p samples
 index=0
 gen=128
 
-classifier_w=96
-classifier_h=60
+classifier_w=48
+classifier_h=30
 
 #find "negatives" -iname "*.jpg" -type f | xargs -I{} identify -format '%w %h %i' {} | awk '$1<640 || $2<480'
 
@@ -56,7 +56,7 @@ cd ..
 ${CV_APP_PATH}/opencv_createsamples \
 	-info samples/samples.txt \
 	-bg negatives/negatives.txt \
-	-vec cropped.vec \
+	-vec data/cropped-${classifier_w}-${classifier_h}.vec \
 	-num 1920 -w ${classifier_w} -h ${classifier_h}
 
 
