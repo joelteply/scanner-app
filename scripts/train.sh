@@ -2,9 +2,15 @@
 classifier_w=48
 classifier_h=30
 
-opencv_traincascade -data output \
-	-vec cropped.vec \
-	-bg negatives/negatives.txt \
+# CV_APP_PATH=bin/darwin
+
+#cp ../../build_opencv/bin/opencv_traincascade bin/darwin/
+
+cd negatives
+
+../bin/darwin/opencv_traincascade -data output \
+	-vec ../cropped.vec \
+	-bg negatives.txt \
 	-numPos 1000 -numNeg 600 -numStages 20 \
 	-precalcValBufSize 1024 -precalcIdxBufSize 1024 \
 	-featureType HAAR \

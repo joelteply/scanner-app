@@ -17,7 +17,7 @@ rm -rf samples
 mkdir -p samples
 
 index=0
-gen=128
+gen=256
 
 classifier_w=48
 classifier_h=30
@@ -49,7 +49,9 @@ find "positives" \( -iname \*.jpg -o -iname \*.jpeg \) -print0 | while read -r -
 
 done
 
-cat samples/samples_*.txt > samples/samples.txt
+cd samples
+cat samples_*.txt > samples.txt
+cd ..
 
 opencv_createsamples \
 	-info samples/samples.txt \
