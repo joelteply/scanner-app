@@ -1,3 +1,7 @@
+
+classifier_w=48
+classifier_h=30
+
 opencv_traincascade -data output \
 	-vec cropped.vec \
 	-bg negatives/negatives.txt \
@@ -5,4 +9,4 @@ opencv_traincascade -data output \
 	-precalcValBufSize 1024 -precalcIdxBufSize 1024 \
 	-featureType HAAR \
 	-minHitRate 0.995 -maxFalseAlarmRate 0.5 \
-	-w 128 -h 80
+	-w ${classifier_w} -h ${classifier_h}
