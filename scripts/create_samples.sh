@@ -3,10 +3,8 @@
 
 #exiftool -q -r -if '$ImageHeight < 480' -if '$ImageWidth < 640' -p '$Directory/$FileName' "negatives" | xargs rm
 
-rm -f negatives/negatives.txt
-cd negatives
-ls -l1 *.jpg > negatives.txt
-cd ..
+rm -f negatives.txt
+ls -l1 negatives/*.jpg > negatives.txt
 
 CV_APP_PATH=./bin/darwin
 
@@ -25,7 +23,7 @@ find "positives" \( -iname \*.jpg -o -iname \*.jpeg \) -print0 | while read -r -
   # base="${file##*/}" $base is the file name with all the directory stuff stripped off
   # dir="${file%/*}    $dir is the directory with the file name stripped off
   # echo "$file"
-  INFO_PATH="samples/samples_${index}.txt"
+  INFO_PATH="samples_${index}.txt"
 
   echo "Processing image ${file}"
 
@@ -34,7 +32,7 @@ find "positives" \( -iname \*.jpg -o -iname \*.jpeg \) -print0 | while read -r -
 	${CV_APP_PATH}/opencv_createsamples \
 		-rngseed ${seed} \
 		-img ${file} \
-		-bg negatives/negatives.txt \
+		-bg negatives.txt \
 		-info ${INFO_PATH} \
 		-num ${gen} \
 		-maxxangle 0.3 -maxyangle 0.4 -maxzangle 0.4 \
@@ -46,11 +44,12 @@ find "positives" \( -iname \*.jpg -o -iname \*.jpeg \) -print0 | while read -r -
 
 done
 
-cat samples/samples_*.txt > samples/samples.txt
+cat samples_*.txt > samples.txt
+rm -f samples_*.txt
 
 opencv_createsamples \
-	-info samples/samples.txt \
-	-bg negatives/negatives.txt \
+	-info samples.txt \
+	-bg negatives.txt \
 	-vec cropped.vec \
 	-num 1920 -w 128 -h 80
 

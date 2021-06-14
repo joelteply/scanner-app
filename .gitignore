@@ -44,3 +44,6 @@ scripts/negatives/*.jpg
 /scripts/samples
 /scripts/bin
 /scripts/cropped.vec
+scripts/*.jpg
+/scripts/samples.txt
+/scripts/negatives.txt
