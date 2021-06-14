@@ -19,8 +19,8 @@ mkdir -p samples
 index=0
 gen=256
 
-classifier_w=48
-classifier_h=30
+classifier_w=80
+classifier_h=50
 
 #find "negatives" -iname "*.jpg" -type f | xargs -I{} identify -format '%w %h %i' {} | awk '$1<640 || $2<480'
 
