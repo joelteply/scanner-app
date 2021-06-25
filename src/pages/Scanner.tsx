@@ -1,7 +1,7 @@
-import React, {useCallback, useMemo, useState} from 'react'
+import React, {useCallback, useEffect, useMemo, useState} from 'react'
 import './Scanner.css'
 
-import {CBARContext, CBARFeatureTracking, CBARMode, CBARView} from "react-home-ar";
+import {CBARContext, CBARFeatureTracking, CBARMode, CBARView, cbInitialize} from "react-home-ar";
 import {Button, Icon} from "@material-ui/core";
 
 export default function Scanner() {
@@ -13,7 +13,7 @@ export default function Scanner() {
     }, []);
 
     const startCapture = useCallback(() => {
-        context?.startVideoCamera(CBARFeatureTracking.Classifier).then(()=>{
+        context?.startVideoCamera(CBARFeatureTracking.Card).then(()=>{
             setMode(CBARMode.Video);
         });
     }, [context]);
@@ -22,6 +22,18 @@ export default function Scanner() {
         context?.stopVideoCamera();
         setMode(CBARMode.None);
     }, [context]);
+
+    useEffect(()=>{
+        if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
+            cbInitialize({
+                hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
+                signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
+                processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
+            })
+        } else {
+            throw new Error('REACT_APP_CB_GET_UPLOAD_URLS_URL, REACT_APP_CB_UPLOADS_URL, and REACT_APP_CB_SEGMENT_URL must be defined')
+        }
+    }, [])
 
     return useMemo(() => (
         <div className={"container"}>

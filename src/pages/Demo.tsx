@@ -1,7 +1,15 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import './Demo.css'
 
-import {CBARContext, CBARFeatureTracking, CBARCameraFacing, CBARMode, CBARView} from "react-home-ar";
+import {
+    CBARCameraFacing,
+    CBARContext,
+    CBARDebug,
+    CBARFeatureTracking,
+    CBARMode,
+    CBARView,
+    cbInitialize
+} from "react-home-ar";
 import {Button, Icon, InputLabel, MenuItem, Select} from "@material-ui/core";
 
 export default function Demo() {
@@ -35,6 +43,42 @@ export default function Demo() {
 
     const [mode, setMode] = useState(CBARMode.None);
 
+    useEffect(()=>{
+        if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
+            const baseInit = {
+                hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
+                signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
+                processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
+                placeholderPath:"assets/img/blue-tile.png",
+                debug:CBARDebug.TrackedLines | CBARDebug.OpticalFlow
+            }
+
+            if (trackingMode === CBARFeatureTracking.Face) {
+                cbInitialize({
+                    ...baseInit,
+                    classifierPath:"assets/haarcascade_eye.xml",
+                    classifierMaxRegions:2,
+                    classifierMinSize:[0.07, 0.07],
+                    classifierMaxSize:[0.25, 0.25],
+                    classifierUpdateFrequency:1500,
+                })
+            } else if (trackingMode === CBARFeatureTracking.Classifier) {
+                cbInitialize({
+                    ...baseInit,
+                    classifierPath:"assets/cascade_lbp.xml",
+                    classifierMaxRegions:100,
+                    classifierMinSize:[0.4, 0.25],
+                    classifierMaxSize:[0.9, 0.5],
+                    classifierUpdateFrequency:500,
+                })
+            } else {
+                cbInitialize(baseInit);
+            }
+        } else {
+            throw new Error('REACT_APP_CB_GET_UPLOAD_URLS_URL, REACT_APP_CB_UPLOADS_URL, and REACT_APP_CB_SEGMENT_URL must be defined')
+        }
+    }, [trackingMode])
+
     return useMemo(() => (
         <div style={{width:"100vw", height:"100vh"}}>
             <CBARView onContextCreated={ready} />
@@ -55,8 +99,9 @@ export default function Demo() {
                             onChange={(event)=>setTrackingMode(event.target.value as CBARFeatureTracking)} >
                         <MenuItem value={CBARFeatureTracking.None}>None</MenuItem>
                         <MenuItem value={CBARFeatureTracking.World}>World</MenuItem>
-                        <MenuItem value={CBARFeatureTracking.Classifier}>Classifier</MenuItem>
                         <MenuItem value={CBARFeatureTracking.Face}>Face</MenuItem>
+                        <MenuItem value={CBARFeatureTracking.Card}>Card</MenuItem>
+                        <MenuItem value={CBARFeatureTracking.Page}>Page</MenuItem>
                     </Select>
                 </div>
             </div>

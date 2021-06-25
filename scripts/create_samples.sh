@@ -1,9 +1,12 @@
 
 #following example and some data from https://memememememememe.me/post/training-haar-cascades/
 
+classifier_w=48
+classifier_h=30
+
 #to build the tool: cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_opencv_apps=ON -DBUILD_SHARED_LIBS=OFF ../opencv
 
-#exiftool -q -r -if '$ImageHeight < 480' -if '$ImageWidth < 640' -p '$Directory/$FileName' "negatives" | xargs rm
+exiftool -q -r -if '$ImageHeight < ${classifier_h}' -if '$ImageWidth < ${classifier_w}' -p '$Directory/$FileName' "negatives" | xargs rm
 
 rm -f negatives/negatives.txt
 cd negatives
@@ -20,9 +23,6 @@ mkdir -p samples
 
 index=0
 gen=128
-
-classifier_w=48
-classifier_h=30
 
 #find "negatives" -iname "*.jpg" -type f | xargs -I{} identify -format '%w %h %i' {} | awk '$1<640 || $2<480'
 

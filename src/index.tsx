@@ -9,37 +9,11 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import {SiteContext, createEmptyState, siteStateReducer, stateToUrl} from "./data/SiteContext"
 import {BrowserProperties, WebClientInfo} from "react-client-info"
 
-import * as qs from "querystring";
-import {objectToLowerCase, selectScene} from "./utilities/Methods";
-
 import Scanner from "./pages/Scanner"
 import {ApiCapabilityName, FeatureAppearanceConfig, SiteConfig} from "cambrian-base";
 import Demo from "./pages/Demo";
-import {cbInitialize} from "react-home-ar";
 
 const objectFitImages = require('object-fit-images');
-
-export let siteName = (window as any).siteName;
-
-if (!siteName) {
-    siteName = process.env.REACT_APP_SITE_NAME ? process.env.REACT_APP_SITE_NAME : "default"
-}
-
-const isLocal = process.env.REACT_APP_IS_LOCAL==="1";
-export const SITE_PATH = !isLocal && process.env.REACT_APP_SITES_ROOT ? `${process.env.REACT_APP_SITES_ROOT}/${siteName}` : `cambrianar-sites/${siteName}`;
-const CONFIG_PATH = `config/${siteName}.json`;
-
-if (process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL && process.env.REACT_APP_CB_UPLOADS_URL && process.env.REACT_APP_CB_SEGMENT_URL) {
-    cbInitialize({
-        hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
-        signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
-        processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
-        placeholderPath:"assets/img/blue-tile.png",
-        classifierPath:"assets/cascade_hog.xml"
-    })
-} else {
-    throw new Error('REACT_APP_CB_GET_UPLOAD_URLS_URL, REACT_APP_CB_UPLOADS_URL, and REACT_APP_CB_SEGMENT_URL must be defined')
-}
 
 export const isFeatureEnabled = (siteData:SiteConfig, name:ApiCapabilityName):boolean => {
     const feature = siteData.features.find(f=>f.name === name);
@@ -54,39 +28,13 @@ export const getFeatureAppearance = (siteData:SiteConfig, name:ApiCapabilityName
     return match ? match : defaultAppearance
 };
 
-export type RoomPaths = {
-    base:string,
-    data:string,
-    thumbnail:string,
-    preview:string
-}
-
-export const getScenePaths = (collectionName?:string, sceneName?:string):RoomPaths =>{
-    const basePath = `${SITE_PATH}/scenes/${collectionName}/${sceneName}`;
-    return {
-        base:basePath,
-        data:`${basePath}/data.json`,
-        thumbnail:`${basePath}/thumbnail.jpg`,
-        preview:`${basePath}/preview.jpg`
-    }
-};
-
-export const getUploadedRoomPaths = (roomID?:string):RoomPaths=>{
-    const basePath = `${process.env.REACT_APP_CB_UPLOADS_URL}/${roomID}`;
-    return {
-        base:basePath,
-        data:`${basePath}/data_v3.json`,
-        thumbnail:`${basePath}/thumbnail.jpg`,
-        preview:`${basePath}/preview.jpg`
-    }
-};
-
 function App() {
     const initialSiteState = createEmptyState();
     const [siteState, dispatchSiteState] = useReducer(siteStateReducer, initialSiteState);
     const [browserProperties, setBrowserProperties] = useState<BrowserProperties>({});
-    const [customStylesheet, setCustomStylesheet] = useState<string>()
-    // Url load states
+    // const searchObject = useMemo(()=>{
+    //     return objectToLowerCase(qs.parse(window.location.search.substr(1)));
+    // }, []);
 
     //component mounted:
     useEffect(() => {
@@ -97,14 +45,6 @@ function App() {
             //unmount
         }
     }, []);
-
-    useEffect(() => {
-        if (browserProperties.hasTouchpad) {
-            document.documentElement.style.setProperty("--scrollbar-style", "none");
-            document.documentElement.style.setProperty("--scrollbar-display", "none");
-            document.documentElement.style.setProperty("--scrollbar-thickness", "0px")
-        }
-    }, [browserProperties.hasTouchpad]);
 
     const setCssVars = useCallback(() => {
         if (!browserProperties.browser) return;
@@ -129,132 +69,9 @@ function App() {
         setCssVars();
     }, [browserProperties, setCssVars]);
 
-    const loadScene = useCallback((collection:string, scene:string)=> {
-
-        dispatchSiteState({
-            type: "setSelectedSampleRoomType",
-            selectedSampleRoomType: collection as string
-        });
-
-        dispatchSiteState({
-            type: "setSelectedSampleRoom",
-            selectedSampleRoom: scene as string,
-        });
-
-    }, []);
-
     const updateFromLocation = useCallback((location:any) => {
 
-        // Parse URL search string without the first character (typically question mark).
-        // Also turn the keys into lowercase so their case doesn't matter.
-        const searchObject = objectToLowerCase(qs.parse(location.search.substr(1)));
-
-        const scene = searchObject.scene as string;
-        if (scene) {
-            selectScene(scene, dispatchSiteState)
-        }
-
-        if (searchObject.controls) {
-            dispatchSiteState({
-                type: "setShowControls",
-                showControls: searchObject.controls
-            })
-        }
-
-        if (searchObject.collection) {
-            dispatchSiteState({
-                type: "setCollection",
-                code:searchObject.collection
-            })
-        }
-
-        if (searchObject.product) {
-            dispatchSiteState({
-                type: "setProduct",
-                code:searchObject.product
-            })
-        }
-
-        if (searchObject.color) {
-            dispatchSiteState({
-                type: "setColor",
-                code:searchObject.color
-            })
-        }
-
-        if (searchObject.room) {
-            dispatchSiteState({
-                type: "setSelectedRoom",
-                selectedRoom: searchObject.room
-            });
-        } else if (searchObject.r && searchObject.rt) {
-            dispatchSiteState({
-                type: "setSelectedSampleRoomType",
-                selectedSampleRoomType: searchObject.rt
-            });
-
-            dispatchSiteState({
-                type: "setSelectedSampleRoom",
-                selectedSampleRoom: searchObject.r,
-            });
-        }
-
-        //load defaults
-        fetch(CONFIG_PATH).then(res => res.json())
-            .then(json => {
-                const config = json as SiteConfig;
-
-                dispatchSiteState({
-                    type: "setSiteData",
-                    siteData:json
-                });
-
-                if (searchObject.rt && searchObject.r) {
-                    loadScene(searchObject.rt, searchObject.r);
-                }
-
-                // if (!document.title && config.appearance.header) {
-                //     const header = getHeader(config.appearance.header, "/");
-                //     if (header) {
-                //         document.title = header.title;
-                //     }
-                // }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-primary")) {
-                    document.documentElement.style.setProperty("--mdc-theme-primary", config.appearance.primaryColor)
-                }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-on-primary")) {
-                    document.documentElement.style.setProperty("--mdc-theme-on-primary", config.appearance.primaryTextColor)
-                }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-secondary")) {
-                    document.documentElement.style.setProperty("--mdc-theme-secondary", config.appearance.secondaryColor)
-                }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-on-secondary")) {
-                    document.documentElement.style.setProperty("--mdc-theme-on-secondary", config.appearance.secondaryTextColor)
-                }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-surface")) {
-                    document.documentElement.style.setProperty("--mdc-theme-surface", config.appearance.surfaceColor)
-                }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-on-surface")) {
-                    document.documentElement.style.setProperty("--mdc-theme-on-surface", config.appearance.surfaceTextColor)
-                }
-
-                if (!document.documentElement.style.getPropertyValue("--mdc-theme-inactive")) {
-                    document.documentElement.style.setProperty("--mdc-theme-inactive", config.appearance.inactiveColor)
-                }
-
-                if (config.appearance.customStylesheet) {
-                    setCustomStylesheet(`${SITE_PATH}/${config.appearance.customStylesheet}`)
-                }
-
-            });
-
-    }, [loadScene]);
+    }, []);
 
     const initialize = useCallback(() => {
         setCssVars();
@@ -286,7 +103,6 @@ function App() {
 
     return (
         <Router>
-            <link rel="stylesheet" href={customStylesheet} />
             <Route
                 render={({ // @ts-ignore
                              location }) => {
