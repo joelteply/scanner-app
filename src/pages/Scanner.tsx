@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react'
 import './Scanner.css'
 
-import {CBARContext, CBARFeatureTracking, CBARMode, CBARView, cbInitialize} from "react-home-ar";
+import {CBARContext, CBARDebug, CBARFeatureTracking, CBARMode, CBARView, cbInitialize} from "react-home-ar";
 import {Button, Icon} from "@material-ui/core";
 
 export default function Scanner() {
@@ -29,6 +29,7 @@ export default function Scanner() {
                 hostingUrl: process.env.REACT_APP_CB_UPLOADS_URL,
                 signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
                 processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
+                debug:CBARDebug.OpticalFlow | CBARDebug.TrackedLines
             })
         } else {
             throw new Error('REACT_APP_CB_GET_UPLOAD_URLS_URL, REACT_APP_CB_UPLOADS_URL, and REACT_APP_CB_SEGMENT_URL must be defined')

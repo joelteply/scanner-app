@@ -50,7 +50,7 @@ export default function Demo() {
                 signingUrl: process.env.REACT_APP_CB_GET_UPLOAD_URLS_URL,
                 processingUrl: process.env.REACT_APP_CB_SEGMENT_URL,
                 placeholderPath:"assets/img/blue-tile.png",
-                debug:CBARDebug.TrackedLines | CBARDebug.OpticalFlow
+                debug:CBARDebug.OpticalFlow | CBARDebug.TrackedLines
             }
 
             if (trackingMode === CBARFeatureTracking.Face) {
