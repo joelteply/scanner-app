@@ -37,6 +37,7 @@ export default function Demo() {
     }, [context, facingMode, trackingMode]);
 
     const stopCapture = useCallback(() => {
+        context?.captureImage();
         context?.stopVideoCamera();
         setMode(CBARMode.None);
     }, [context]);
